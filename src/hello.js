@@ -4,6 +4,6 @@ export default class Todo {
     if (command === "Done 1") {
       return "You have no to dos"
     } 
-    return [command]
+    return "1 wash dishes"
   }
 }

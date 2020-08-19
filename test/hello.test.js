@@ -8,7 +8,7 @@ beforeEach(() => {
 
 describe('Add an item to the todo list', () => {
   it('add wash dishes to todo array', () => {
-    expect(todo.updateToDo("Add wash dishes")).toStrictEqual(["Add wash dishes"])
+    expect(todo.updateToDo("Add wash dishes")).toStrictEqual("1 wash dishes")
   })
 })
 
