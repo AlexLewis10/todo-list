@@ -11,8 +11,12 @@ export default class Todo {
       splitString = splitString.join(" ")
       this.toDoList.push(splitString)
 
-      let position = `${this.toDoList.length}`
-      this.toDoList[position -1] = `${position} ${this.toDoList[position - 1]}`
+      const position = `${this.toDoList.length}`
+      const toDoListPosition = position - 1
+      this.toDoList[toDoListPosition] = (
+        `${position} ${this.toDoList[toDoListPosition]}`
+      )
+      
 
       return this.toDoList.join("\n")
     }
