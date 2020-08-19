@@ -11,11 +11,9 @@ export default class Todo {
       splitString = splitString.join(" ")
       this.toDoList.push(splitString)
 
-      const position = `${this.toDoList.length}`
-      const toDoListPosition = position - 1
-      this.toDoList[toDoListPosition] = (
-        `${position} ${this.toDoList[toDoListPosition]}`
-      )
+      this._addArrayPosition()
+
+
       
 
       return this.toDoList.join("\n")
@@ -23,5 +21,13 @@ export default class Todo {
     if (command === "Done 1") {
       return "You have no to dos"
     } 
+  }
+
+  _addArrayPosition () {
+    const position = `${this.toDoList.length}`
+    const toDoListPosition = position - 1
+    this.toDoList[toDoListPosition] = (
+      `${position} ${this.toDoList[toDoListPosition]}`
+    )
   }
 }
