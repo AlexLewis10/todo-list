@@ -1,4 +1,14 @@
-Todo app
+## Todo App
+
+This project was done as part of a timed review and is not yet complete.
+
+This project is a very simple todo app, which takes an input of a task or a message to say that the task has been completed.
+
+It uses an array as storage rather than a database.
+
+### Notes
+
+**The following are notes taken whilst being briefed;**
 
 Add and complete to dos
 
