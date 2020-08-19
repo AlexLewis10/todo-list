@@ -1,13 +1,13 @@
-import Hello from '../src/hello'
+import Todo from '../src/hello'
 
-let hello
+let todo
 
 beforeEach(() => {
-  hello = new Hello()
+  todo = new Todo()
 })
 
-describe('Hello', () => {
-  it ('says hello', () => {
-    expect(hello.hello()).toStrictEqual("Hello")
+describe('Add an item to the todo list', () => {
+  it ('add wash dishes to todo array', () => {
+    expect(todo.updateToDo("Add wash dishes")).toStrictEqual(["Add wash dishes"])
   })
 })

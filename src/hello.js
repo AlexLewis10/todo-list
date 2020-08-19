@@ -1,6 +1,6 @@
-export default class Hello {
+export default class Todo {
 
-  hello () {
-    return 'Hello'
+  updateToDo (command) {
+    return [command]
   }
 }
