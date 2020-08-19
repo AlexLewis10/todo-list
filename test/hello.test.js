@@ -11,8 +11,14 @@ describe('Add an item to the todo list', () => {
     expect(todo.updateToDo("Add wash dishes")).toStrictEqual("1 wash dishes")
   })
 
-  it('add two items and return todo list', () => {
+  it('add new item to the start of the list', () => {
     expect(todo.updateToDo('Add walk dog')).toStrictEqual("1 walk dog")
+  })
+
+  it('add 2 items to the list', () => {
+    todo.updateToDo("Add wash dishes")
+
+    expect(todo.updateToDo("Add walk dog")).toStrictEqual('1 wash dishes\n2 walk dog')
   })
 })
 
