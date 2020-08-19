@@ -26,4 +26,11 @@ describe('Remove an item from the todo list', () => {
   it('remove wash dishes from the todo array and return', () => {
     expect(todo.updateToDo("Done 1")).toStrictEqual("You have no to dos")
   })
+
+  it('remove second item from the todo array and return', () => {
+    todo.updateToDo("Add wash dishes")
+    todo.updateToDo("Add walk dog")
+
+    expect(todo.updateToDo("Done 2")).toStrictEqual('1 wash dishes')
+  })
 })

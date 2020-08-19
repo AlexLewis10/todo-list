@@ -9,11 +9,17 @@ export default class Todo {
     if (splitString[0] === "Add") {
       this._removeAdd(splitString)
       this._addArrayPosition()
-      return this.toDoList.join("\n")
+      // return this.toDoList.join("\n")
     }
-    if (command === "Done 1") {
-      return "You have no to dos"
+    if (splitString[0] === "Done") {
+      const listPosition = (parseInt(splitString[1]) - 1)
+      this.toDoList.splice(listPosition, 1)
     } 
+    if (this.toDoList.length === 0) {
+      return "You have no to dos"
+    }
+
+    return this.toDoList.join("\n")
   }
 
   _removeAdd (splitString) {
