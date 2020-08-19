@@ -7,9 +7,10 @@ export default class Todo {
   updateToDo (command) {
     let splitString = command.split(" ")
     if (splitString[0] === "Add") {
-      splitString.shift()
-      splitString = splitString.join(" ")
-      this.toDoList.push(splitString)
+      this._removeAdd(splitString)
+      // splitString.shift()
+      // splitString = splitString.join(" ")
+      // this.toDoList.push(splitString)
 
       this._addArrayPosition()
 
@@ -21,6 +22,12 @@ export default class Todo {
     if (command === "Done 1") {
       return "You have no to dos"
     } 
+  }
+
+  _removeAdd (splitString) {
+    splitString.shift()
+    splitString = splitString.join(" ")
+    this.toDoList.push(splitString)
   }
 
   _addArrayPosition () {
