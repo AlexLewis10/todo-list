@@ -21,6 +21,10 @@ INPUT | OUTPUT
 -------------------------------------
 "Add wash dishes" | 1 wash dishes |
 "Add walk dog"    | "1 wash dishes\n 2 walk dog"  |
+"done 2"          | "1 wash dishes" |
+-------------------------------------
+"Add wash dishes" | 1 wash dishes |
+"Add walk dog"    | "1 wash dishes\n 2 walk dog"  |
 "done 1"          | "1 walk dog" |
 
 
