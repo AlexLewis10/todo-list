@@ -8,15 +8,7 @@ export default class Todo {
     let splitString = command.split(" ")
     if (splitString[0] === "Add") {
       this._removeAdd(splitString)
-      // splitString.shift()
-      // splitString = splitString.join(" ")
-      // this.toDoList.push(splitString)
-
       this._addArrayPosition()
-
-
-      
-
       return this.toDoList.join("\n")
     }
     if (command === "Done 1") {
@@ -26,8 +18,12 @@ export default class Todo {
 
   _removeAdd (splitString) {
     splitString.shift()
-    splitString = splitString.join(" ")
-    this.toDoList.push(splitString)
+    const joinedString = splitString.join(" ")
+    this._addToArray(joinedString)
+  }
+
+  _addToArray (listItem) {
+    this.toDoList.push(listItem)
   }
 
   _addArrayPosition () {
